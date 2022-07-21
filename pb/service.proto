@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "/chat";
+
+message Message {
+  string content = 1;
+}
+
+service ChatService {
+  rpc Send(Message) returns (Message) {}
+}
